@@ -21,7 +21,7 @@ public class PlayerScaleExpansion extends PlaceholderExpansion {
 
     @Override
     public @NotNull String getVersion() {
-        return "1.0.0";
+        return "1.0.1";
     }
 
     @Override
@@ -32,7 +32,7 @@ public class PlayerScaleExpansion extends PlaceholderExpansion {
     @Override
     public String onRequest(OfflinePlayer p, @NotNull String params) {
         if (p == null || !p.isOnline()) return "";
-        AttributeInstance scale = ((Player) p).getAttribute(Attribute.GENERIC_SCALE);
+        AttributeInstance scale = ((Player) p).getAttribute(Attribute.SCALE);
         if (scale == null) return "";
         return String.valueOf(scale.getValue());
     }
